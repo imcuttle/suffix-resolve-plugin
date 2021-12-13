@@ -22,6 +22,8 @@ dir/
 在 foo.js 中，require('./dir'), 将会根据 suffixList 的匹配顺序，依次进行命中，如 suffixList = ['.dev', '']
 则 require('./dir') 则会解析成 require('./dir/index.dev.js')
 
+经常被用在需要构建不同环境的代码的场景，如跨端代码等
+
 ## Installation
 
 ```bash
