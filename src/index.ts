@@ -13,20 +13,20 @@ const nps = require('path')
  *
  * **一般用于构建不同的静态产物**
  */
-export interface SuffixAliasResolvePluginOptions {
+export interface SuffixResolvePluginOptions {
   suffixList?: string[]
   dir?: string
   verbose?: boolean
   include?: (filename: string) => boolean
 }
 
-export class SuffixAliasResolvePlugin {
-  protected suffixList: SuffixAliasResolvePluginOptions['suffixList']
-  protected dir: SuffixAliasResolvePluginOptions['dir']
-  protected verbose: SuffixAliasResolvePluginOptions['verbose']
-  protected include: SuffixAliasResolvePluginOptions['include']
+export class SuffixResolvePlugin {
+  protected suffixList: SuffixResolvePluginOptions['suffixList']
+  protected dir: SuffixResolvePluginOptions['dir']
+  protected verbose: SuffixResolvePluginOptions['verbose']
+  protected include: SuffixResolvePluginOptions['include']
   protected cache: Map<any, any>
-  constructor({ suffixList, dir = process.cwd(), verbose = false, include }: SuffixAliasResolvePluginOptions = {}) {
+  constructor({ suffixList, dir = process.cwd(), verbose = false, include }: SuffixResolvePluginOptions = {}) {
     this.suffixList = suffixList || []
     this.dir = dir
     this.verbose = verbose
