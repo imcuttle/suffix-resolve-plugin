@@ -1,6 +1,6 @@
 {
   "name": "suffix-resolve-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "enhanced-resolve 插件，为了支持 resolve 不同优先级后缀路径",
   "author": "余聪 <yucong@yuanfudao.com>",
   "scripts": {
