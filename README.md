@@ -8,14 +8,19 @@
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg?style=flat-square)](https://conventionalcommits.org)
 
 > enhanced-resolve 插件，为了支持 resolve 不同优先级后缀路径
->
-> foo.js
-> dir/
-> index.js
-> index.dev.js
-> index.prod.js
-> 在 foo.js 中，require('./dir'), 将会根据 suffixList 的匹配顺序，依次进行命中，如 suffixList = ['.dev', '']
-> 则 require('./dir') 则会解析成 require('./dir/index.dev.js')
+
+如下：
+
+```text
+foo.js
+dir/
+  index.js
+  index.dev.js
+  index.prod.js
+```
+
+在 foo.js 中，require('./dir'), 将会根据 suffixList 的匹配顺序，依次进行命中，如 suffixList = ['.dev', '']
+则 require('./dir') 则会解析成 require('./dir/index.dev.js')
 
 ## Installation
 
